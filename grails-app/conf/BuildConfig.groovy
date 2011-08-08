@@ -29,6 +29,6 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
 	plugins {
-		runtime "org.grails.plugins:spring-social-twitter:0.1.1"
+		runtime "org.grails.plugins:spring-social-twitter:0.1.2"
 	}
 }
