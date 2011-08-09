@@ -96,7 +96,7 @@ grails.plugins.springsecurity.authority.className = 'com.demo.Role'
 
 
 
-grails.plugins.springsocial.twitter.consumerKey="YR571S2JiVBOFyJS5MEg"
-grails.plugins.springsocial.twitter.consumerSecret="Kb8hS0luftwCJX3qVoyiLUMfZDtK1EozFoUkjNLUMx4"
+grails.plugins.springsocial.twitter.consumerKey="mcBxpCFGwS9gW5NbF4AZZg"
+grails.plugins.springsocial.twitter.consumerSecret="q91y7MQwcQVbugnrMXlc83YupMjZzuEvM5o0XIiSupI"
 
 
