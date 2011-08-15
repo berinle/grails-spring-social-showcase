@@ -95,8 +95,12 @@ grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.demo.Pers
 grails.plugins.springsecurity.authority.className = 'com.demo.Role'
 
 
-
+//Configuration for twitter
 grails.plugins.springsocial.twitter.consumerKey="mcBxpCFGwS9gW5NbF4AZZg"
 grails.plugins.springsocial.twitter.consumerSecret="q91y7MQwcQVbugnrMXlc83YupMjZzuEvM5o0XIiSupI"
+
+//Configuration for facebook
+grails.plugins.springsocial.facebook.clientId="101918953236251"
+grails.plugins.springsocial.facebook.clientSecret="73b06ad466e900d07f5555062068b572"
 
 
