@@ -17,5 +17,6 @@ grails.project.dependency.resolution = {
     dependencies {}
 	plugins {
 		compile "org.grails.plugins:spring-social-twitter:0.1.4"
+		compile "org.grails.plugins:spring-social-facebook:0.1"
 	}
 }

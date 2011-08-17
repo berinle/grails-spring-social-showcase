@@ -1,0 +1,1 @@
+<g:render template="/springsocial/facebook/menu" plugin="spring-social-facebook" />
