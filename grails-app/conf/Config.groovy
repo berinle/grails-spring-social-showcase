@@ -82,11 +82,27 @@ log4j = {
            'org.codehaus.groovy.grails.commons', // core / classloading
            'org.codehaus.groovy.grails.plugins', // plugins
            'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
+'org.codehaus.groovy.grails.scaffolding',
+'org.codehaus.groovy.grails.web.context',
+			'org.apache',
            'org.springframework',
            'org.hibernate',
-           'net.sf.ehcache.hibernate'
+           'net.sf',
+'grails'
 
     warn   'org.mortbay.log'
+
+	info 'grails.app.controllers.grails.plugins.springsocial', 'grails.plugins.springsocial', 'grails.plugins.controllers.grails.plugins.springsocial'
+	
+	appenders {
+	//      console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+	    console name: 'stdout', layout: pattern(conversionPattern: '%d{ISO8601}\t%p\t%c:%L\t%m%n'), threshold: org.apache.log4j.Level.DEBUG
+	    //appender new DailyRollingFileAppender(name: 'file', file: logDirectory + 'ss_showcase.log', datePattern: '\'_\'yyyy-MM-dd', layout: pattern(conversionPattern: '%d{ISO8601}\t%p\t%c:%L\t%m%n'))
+	  }
+	  root {
+	    info 'file'
+	    additivity = true
+	  }
 }
 
 // Added by the Spring Security Core plugin:
