@@ -105,11 +105,6 @@ log4j = {
 	  }
 }
 
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.demo.Person'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.demo.PersonRole'
-grails.plugins.springsecurity.authority.className = 'com.demo.Role'
-
 
 //Configuration for twitter
 grails.plugins.springsocial.twitter.consumerKey="mcBxpCFGwS9gW5NbF4AZZg"
@@ -120,3 +115,8 @@ grails.plugins.springsocial.facebook.clientId="101918953236251"
 grails.plugins.springsocial.facebook.clientSecret="73b06ad466e900d07f5555062068b572"
 
 
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.synergyj.grails.plugins.springsocial.showcase.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.synergyj.grails.plugins.springsocial.showcase.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.synergyj.grails.plugins.springsocial.showcase.Role'
