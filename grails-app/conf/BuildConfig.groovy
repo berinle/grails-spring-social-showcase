@@ -17,7 +17,7 @@ grails.project.dependency.resolution = {
     dependencies {}
 	plugins {
     //compile(":twitter-bootstrap:1.3.0.7")
-		compile(":spring-security-core:1.2.1")
+		compile(":spring-security-core:1.2.4")
 		compile(":spring-social-core:0.1.30")
 		compile(":spring-social-twitter:0.1.30")
 		compile(":spring-social-facebook:0.1.31")
