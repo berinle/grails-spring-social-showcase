@@ -2,7 +2,7 @@ package grails.plugins.springsocial
 
 import grails.test.*
 
-class UtilTagLibTests extends TagLibUnitTestCase {
+class UtilShowcaseTagLibTests extends TagLibUnitTestCase {
     protected void setUp() {
         super.setUp()
     }

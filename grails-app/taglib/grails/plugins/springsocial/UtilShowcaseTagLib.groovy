@@ -15,7 +15,7 @@
  */
 package grails.plugins.springsocial
 
-class UtilTagLib {
+class UtilShowcaseTagLib {
   def springSocialShowcaseService
 
   static namespace = 'springsocial'
