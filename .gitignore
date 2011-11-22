@@ -1,6 +1,8 @@
 .svn
 .idea/
 *.iml
+*.ipr
+*.iws
 plugin.xml
 target/
 *.zip

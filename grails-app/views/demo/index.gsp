@@ -1,7 +1,6 @@
 <html>
 <head>
     <title>Twitter Profile</title>
-    <parameter name="leftMenu" value="/demo/menu"/>
     <meta name='layout' content='springSocialMain'/>
 </head>
 
@@ -10,21 +9,32 @@
 <g:set var="connectionFactories" value="${springsocial.registeredProviderIds()}"/>
 
 <ul>
-    <g:each in="${connectionFactories}" var="providerId">
-        <g:set var="connected" value="${springsocial.isCurrentUserConnectedTo(providerId: providerId)}" />
-        <li>CurrentUser is Connected to ${providerId}: ${connected}
-            <g:if test="${Boolean.valueOf(connected)}">
-                <ul>
-                    <g:set var="profiles" value="${springsocial.currentUserProfilesToService(providerId:providerId)}"/>
-                    <g:each in="${profiles}" var="profile">
-                        <li>
-                            ${providerId} profile: ${profile.name}
-                        </li>
-                    </g:each>
-                </ul>
-            </g:if>
-        </li>
-    </g:each>
+  <sec:ifLoggedIn>
+    You are logged as <b> <sec:loggedInUserInfo field="username"/> </b>
+  </sec:ifLoggedIn>
+  <sec:ifNotLoggedIn>
+    You aren't logged yet...
+  </sec:ifNotLoggedIn>
+  <g:each in="${connectionFactories}" var="providerId">
+    <g:set var="connected" value="${springsocial.isCurrentUserConnectedTo(providerId: providerId)}"/>
+    <li>
+      <g:if test="${Boolean.valueOf(connected)}">
+        <g:set var="profiles" value="${springsocial.currentUserProfilesToService(providerId:providerId)}"/>
+        <g:each in="${profiles}" var="profile">
+          You're connected to <b>${providerId.capitalize()}</b> as
+          <g:link controller="springSocial${providerId.capitalize()}">
+            <b>${profile.name}</b>
+          </g:link>
+        </g:each>
+      </g:if>
+      <g:else>
+        You aren't connected to <b>${providerId.capitalize()}</b>
+        <g:link controller="springSocial${providerId.capitalize()}">
+          Connect
+        </g:link>
+      </g:else>
+    </li>
+  </g:each>
 </ul>
 
 </body>
