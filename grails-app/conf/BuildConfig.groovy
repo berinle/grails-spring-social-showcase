@@ -3,23 +3,23 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 grails.project.dependency.resolution = {
-    // inherit Grails' default dependencies
-    inherits("global") {
-        // uncomment to disable ehcache
-        // excludes 'ehcache'
-    }
-    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
-    repositories {
-        grailsPlugins()
-        grailsHome()
-        grailsCentral()
-    }
-    dependencies {}
-	plugins {
+  // inherit Grails' default dependencies
+  inherits("global") {
+    // uncomment to disable ehcache
+    // excludes 'ehcache'
+  }
+  log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+  repositories {
+    grailsPlugins()
+    grailsHome()
+    grailsCentral()
+  }
+  dependencies {}
+  plugins {
     //compile(":twitter-bootstrap:1.3.0.7")
-		compile(":spring-security-core:1.2.4")
-		compile(":spring-social-core:0.1.31")
-		compile(":spring-social-twitter:0.1.31")
-		compile(":spring-social-facebook:0.1.32")
-	}
+    compile(":spring-security-core:1.2.4")
+    compile(":spring-social-core:0.1.31")
+    compile(":spring-social-twitter:0.1.31")
+    compile(":spring-social-facebook:0.1.32")
+  }
 }
