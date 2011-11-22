@@ -15,11 +15,8 @@
  */
 package grails.plugins.springsocial.service
 
-import org.springframework.social.connect.ConnectionRepository
-import org.springframework.social.connect.UserProfile
 import org.springframework.social.connect.ConnectionFactoryLocator
-import org.springframework.social.connect.Connection
-import org.springframework.util.MultiValueMap
+import org.springframework.social.connect.ConnectionRepository
 
 class SpringSocialShowcaseService {
   def springSecurityService
@@ -28,37 +25,4 @@ class SpringSocialShowcaseService {
 
   static transactional = false
 
-  /**
-   *@see org.springframework.social.connect.ConnectionFactoryLocator#registeredProviderIds()
-   */
-  Set<String> registeredProviderIds() {
-    connectionFactoryLocator.registeredProviderIds()
-  }
-
-  /**
-   * @see org.springframework.social.connect.ConnectionRepository#findAllConnections()
-   */
-  MultiValueMap<String, Connection<?>> findAllConnections() {
-    verifyCurrentUser()
-    connectionRepository.findAllConnections()
-  }
-
-  Boolean isCurrentUserConnectedTo(String providerId) {
-    //verifyCurrentUser()
-    connectionRepository.findConnections(providerId).size()
-  }
-
-  /**
-   * @see org.springframework.social.connect.ConnectionRepository#findConnections(String)
-   */
-  List<UserProfile> getUserProfile(String providerId) {
-    verifyCurrentUser()
-    connectionRepository.findConnections(providerId)*.fetchUserProfile()
-  }
-
-  private void verifyCurrentUser() {
-     if(!springSecurityService.isLoggedIn()) {
-      throw new IllegalStateException("There is no current user loggedId")
-    }
-  }
 }
