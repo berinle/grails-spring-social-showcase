@@ -2,7 +2,7 @@ package grails.plugins.springsocial.service
 
 import grails.test.*
 
-class SpringSocialServiceTests extends GrailsUnitTestCase {
+class SpringSocialShowcaseServiceTests extends GrailsUnitTestCase {
     protected void setUp() {
         super.setUp()
     }

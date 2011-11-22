@@ -16,20 +16,20 @@
 package grails.plugins.springsocial
 
 class UtilTagLib {
-  def springSocialService
+  def springSocialShowcaseService
 
   static namespace = 'springsocial'
   static returnObjectForTags = ['registeredProviderIds', 'isCurrentUserConnectedTo', 'currentUserProfilesToService']
 
   def registeredProviderIds = {
-    springSocialService.registeredProviderIds()
+    springSocialShowcaseService.registeredProviderIds()
   }
 
   def isCurrentUserConnectedTo = {attrs, body ->
-    springSocialService.isCurrentUserConnectedTo(attrs.providerId)
+    springSocialShowcaseService.isCurrentUserConnectedTo(attrs.providerId)
   }
 
   def currentUserProfilesToService = {attrs, body ->
-    springSocialService.getUserProfile(attrs.providerId)
+    springSocialShowcaseService.getUserProfile(attrs.providerId)
   }
 }

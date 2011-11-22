@@ -21,7 +21,7 @@ import org.springframework.social.connect.ConnectionFactoryLocator
 import org.springframework.social.connect.Connection
 import org.springframework.util.MultiValueMap
 
-class SpringSocialService {
+class SpringSocialShowcaseService {
   def springSecurityService
   ConnectionRepository connectionRepository
   ConnectionFactoryLocator connectionFactoryLocator
