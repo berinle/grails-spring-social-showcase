@@ -15,13 +15,15 @@ grails.project.dependency.resolution = {
     grailsPlugins()
     grailsHome()
     grailsCentral()
+
+    mavenRepo "http://repo.clickonero.com/nexus/content/repositories/snapshots/"
   }
   dependencies {}
   plugins {
     //compile(":twitter-bootstrap:1.3.0.7")
     compile(":spring-security-core:1.2.4")
-    compile(":spring-social-core:0.1.31")
+    compile(":spring-social-core:0.1.33-SNAPSHOT")
     compile(":spring-social-twitter:0.1.31")
-    compile(":spring-social-facebook:0.1.32")
+    compile(":spring-social-facebook:0.1.33-SNAPSHOT")
   }
 }
