@@ -55,7 +55,7 @@ grails.exceptionresolver.params.exclude = ['password']
 environments {
   production {
     //grails.serverURL = "http://www.changeme.com"
-    grails.serverURL = "http://localhost:8080"
+    grails.serverURL = "http://localhost:8080/springsocial"
   }
   development {
     grails.serverURL = "http://localhost:8080/spring-social-showcase"
